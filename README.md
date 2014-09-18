@@ -4,9 +4,15 @@ chart-paparazzi
 Automatically creates screenshots of graphs that are based on a json file.
 
 # Setup
-run 'npm install' in project directory
+`Clone the repo, go to the project directory and run
+```sh
+$ npm install
+```
 
 # Run
-run 'gulp' in project directory
+Go to the project directory and run
+```sh
+$ gulp
+```
 
-Note: if it doesn't work, try installing PhantomJS.
+Note: if it doesn't work right out of the box, try installing PhantomJS.
