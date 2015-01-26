@@ -15,7 +15,6 @@
     "gulp-sass": "^0.7.3",
     "gulp-watch": "^0.7.0",
     "phantomjs": "^1.9.7-15",
-    "gulp-run": "^1.6.4",
     "gulp-shell": "^0.2.9"
   }
 }
