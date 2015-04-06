@@ -1,4 +1,4 @@
-// config
+// Config
 var PATH_CHARTS = 'charts.json',
 
     DEFAULT_OPTIONS = {
@@ -28,25 +28,25 @@ var PATH_CHARTS = 'charts.json',
 
 Chart.defaults.global.animation = false;
 
-// get data
+// Get data
 var jsonXHR = new XMLHttpRequest();
 jsonXHR.open('GET', PATH_CHARTS);
 jsonXHR.onload = function(e) {
 
-  // parse result
+  // Parse result
   var chartsData = JSON.parse(e.currentTarget.response);
 
-  // get chart num from GET param
+  // Get chart num from GET param
   var num = parseInt(window.location.search.substring(1));
-  if (!num) num = 0; // for testing
+  if (!num) num = 0; // For testing
   chartData = chartsData[num];
 
-  // draw chart
+  // Draw chart
   var chartDOM = document.getElementById('chart'),
       ctx = chartDOM.getContext('2d'),
       chart = new Chart(ctx);
 
-  // merge presets into datasets
+  // Merge presets into datasets
   for (var i = 0; i < chartData.data.datasets.length; i++) {
     chartData.data.datasets[i] = merge(clone(DEFAULT_OPTIONS[chartData.type]), chartData.data.datasets[i]);
   }
@@ -71,11 +71,11 @@ jsonXHR.onload = function(e) {
   }
 }
 
-// send request
+// Send request
 jsonXHR.send();
 
 
-// utility functions
+// Utility functions
 ////////////////////////////////////////////////////
 function merge(obj1, obj2) {
   for (var attr in obj2) {
@@ -88,7 +88,7 @@ function clone(obj) {
   if(obj == null || typeof(obj) != 'object')
     return obj;
 
-  var temp = obj.constructor(); // changed
+  var temp = obj.constructor();
 
   for(var key in obj) {
     if(obj.hasOwnProperty(key)) {

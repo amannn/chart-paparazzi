@@ -1,15 +1,15 @@
-// config
+// Config
 var PATH_APP = 'render',
     PATH_DATA = 'data';
 
-// imports
+// Imports
 var gulp = require('gulp'),
     connect = require('gulp-connect'),
     watch = require('gulp-watch'),
     sass = require('gulp-sass'),
     shell = require('gulp-shell');
 
-// tasks
+// Tasks
 gulp.task('webserver', function() {
   connect.server({
     livereload: true,
